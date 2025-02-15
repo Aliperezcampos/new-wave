@@ -8,55 +8,53 @@
 </head>
 <body>
     <header>
-        <h1>New Wave: Origen, Evolución e Impacto</h1>
+        <h1 class="neon-glitch-text">New Wave: Origen, Evolución e Impacto</h1>
     </header>
-    <nav>
-        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-        <ul class="menu">
-            <li class="menu-item"><a href="#origen">Origen</a>
-                <ul class="submenu">
-                    <li><a href="reaccion-al-punk.html">Reacción al Punk</a></li>
-                    <li><a href="influencias-precursoras.html">Influencias Precursoras</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="#evolucion">Evolución</a>
-                <ul class="submenu">
-                    <li><a href="incorporacion-tecnologia.html">Incorporación de la Tecnología</a></li>
-                    <li><a href="diversificacion-genero.html">Diversificación del Género</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="#caracteristicas">Características Musicales</a>
-                <ul class="submenu">
-                    <li><a href="melodias-pegajosas.html">Melodías Pegajosas</a></li>
-                    <li><a href="ritmo-y-danza.html">Ritmo y Danza</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="#estetica">Estética y Cultura</a>
-                <ul class="submenu">
-                    <li><a href="cambio-de-imagen.html">Cambio de Imagen</a></li>
-                    <li><a href="impacto-en-moda.html">Impacto en la Moda</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="#impacto">Impacto y Legado</a>
-                <ul class="submenu">
-                    <li><a href="transiciones-generos.html">Transiciones a Otros Géneros</a></li>
-                    <li><a href="revivales.html">Revivales</a></li>
-                    <li><a href="cultura-pop.html">Cultura Pop</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="bandas-claves.html">Bandas Claves</a></li>
-        </ul>
-    </nav>
+
+    <!-- Categorías con botones estilo burbuja -->
+    <section class="bubble-buttons">
+        <h2 class="category-title">Origen</h2>
+        <div class="button-group">
+            <a href="reaccion-al-punk.html" class="bubble-button">Reacción al Punk</a>
+            <a href="influencias-precursoras.html" class="bubble-button">Influencias Precursoras</a>
+        </div>
+
+        <h2 class="category-title">Evolución</h2>
+        <div class="button-group">
+            <a href="incorporacion-tecnologia.html" class="bubble-button">Incorporación de la Tecnología</a>
+            <a href="diversificacion-genero.html" class="bubble-button">Diversificación del Género</a>
+        </div>
+
+        <h2 class="category-title">Características Musicales</h2>
+        <div class="button-group">
+            <a href="melodias-pegajosas.html" class="bubble-button">Melodías Pegajosas</a>
+            <a href="ritmo-y-danza.html" class="bubble-button">Ritmo y Danza</a>
+        </div>
+
+        <h2 class="category-title">Estética y Cultura</h2>
+        <div class="button-group">
+            <a href="cambio-de-imagen.html" class="bubble-button">Cambio de Imagen</a>
+            <a href="impacto-en-moda.html" class="bubble-button">Impacto en la Moda</a>
+        </div>
+
+        <h2 class="category-title">Impacto y Legado</h2>
+        <div class="button-group">
+            <a href="transiciones-generos.html" class="bubble-button">Transiciones a Otros Géneros</a>
+            <a href="revivales.html" class="bubble-button">Revivales</a>
+            <a href="cultura-pop.html" class="bubble-button">Cultura Pop</a>
+        </div>
+
+        <h2 class="category-title">Bandas Claves</h2>
+        <div class="button-group">
+            <a href="bandas-claves.html" class="bubble-button">Bandas Claves</a>
+        </div>
+    </section>
+
     <div class="hero-image">
         <img src="images/start.jpg" alt="Imagen de New Wave con elementos icónicos de la época" loading="lazy">
     </div>
     <footer>
         <p>© 2025 New Wave Exploration. Todos los derechos reservados.</p>
     </footer>
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.menu').classList.toggle('show');
-        });
-    </script>
 </body>
 </html>
