@@ -1,7 +1,7 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #ffcc00;
-    color: #0000ff;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
@@ -16,25 +16,108 @@ header {
     color: #000;
 }
 
-h1 {
-    font-family: 'Arial Black', Gadget, sans-serif;
-    text-shadow: 2px 2px #00ff00;
-    font-size: 2em;
+h1.neon-glitch-text {
+    font-family: 'Neon', sans-serif;
+    color: #00cc99; /* Color menos chillante */
+    text-shadow: 0 0 5px #00cc99, 0 0 10px #00cc99, 0 0 20px #00cc99, 0 0 40px #00cc99;
+    font-size: 2.5em;
+    position: relative;
+    animation: glitch 1s infinite;
 }
 
-/* Estilo para los párrafos */
-p {
-    font-family: 'Roboto Condensed', sans-serif; /* Tipo de letra Roboto Condensed */
-    font-size: 18px; /* Aumento del tamaño de la fuente */
-    line-height: 1.5; /* Doble espacio */
-    text-align: justify;
+@keyframes glitch {
+    0% {
+        text-shadow: 2px 2px #ff00ff, -2px -2px #00cc99;
+    }
+    20% {
+        text-shadow: -2px -2px #ff00ff, 2px 2px #00cc99;
+    }
+    40% {
+        text-shadow: 2px -2px #ff00ff, -2px 2px #00cc99;
+    }
+    60% {
+        text-shadow: -2px 2px #ff00ff, 2px -2px #00cc99;
+    }
+    80% {
+        text-shadow: 2px 2px #ff00ff, -2px -2px #00cc99;
+    }
+    100% {
+        text-shadow: -2px -2px #ff00ff, 2px 2px #00cc99;
+    }
 }
 
-.cyberpunk-border {
-    border: 2px solid #00ff00;
-    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
-    padding: 10px;
+.category-title {
+    color: #ff4500; /* Naranja neón */
+    text-align: center;
+    margin-bottom: 20px; /* Más separación con las burbujas */
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ff4500;
+}
+
+.bubble-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 20px 0;
+    padding: 0 10px; /* Padding para mejorar la experiencia en móvil */
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px; /* Más separación con el nombre de la categoría */
+}
+
+.bubble-button {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #ffffff; /* Color del texto */
+    text-decoration: none;
+    border-radius: 50px; /* Bordes redondeados para un look de burbuja */
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.button-group:nth-of-type(1) .bubble-button {
+    background: #b300b3; /* Color de fondo menos destellante */
+    border: 2px solid #b300b3; /* Borde que resalta */
+}
+
+.button-group:nth-of-type(2) .bubble-button {
+    background: #0099cc; /* Color de fondo menos destellante */
+    border: 2px solid #0099cc; /* Borde que resalta */
+}
+
+.button-group:nth-of-type(3) .bubble-button {
+    background: #cc3300; /* Color de fondo menos destellante */
+    border: 2px solid #cc3300; /* Borde que resalta */
+}
+
+.button-group:nth-of-type(4) .bubble-button {
+    background: #cc9900; /* Color de fondo menos destellante */
+    border: 2px solid #cc9900; /* Borde que resalta */
+}
+
+.button-group:nth-of-type(5) .bubble-button {
+    background: #00cc33; /* Color de fondo menos destellante */
+    border: 2px solid #00cc33; /* Borde que resalta */
+}
+
+.button-group:nth-of-type(6) .bubble-button {
+    background: #009966; /* Color de fondo menos destellante */
+    border: 2px solid #009966; /* Borde que resalta */
+}
+
+.bubble-button:hover {
+    color: #1a1a1a;
+    transform: translateY(-5px); /* Movimiento al pasar el ratón */
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
 }
 
 /* Hero Image */
@@ -50,163 +133,6 @@ p {
     max-height: 60vh; /* Ajusta según sea necesario para móviles */
 }
 
-nav {
-    background: #00B7EB;
-    padding: 10px;
-}
-
-/* Estilos para el menú */
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none; /* Ocultar el menú por defecto */
-    flex-direction: column;
-    background-color: #1a1a1a;
-    border: 2px solid #00ff00; /* Borde neón */
-    box-shadow: 0 0 10px #00ff00; /* Sombra neón */
-    border-radius: 20px;
-}
-
-.menu.show {
-    display: flex; /* Mostrar el menú cuando se activa */
-}
-
-.menu-item {
-    border-bottom: 1px solid #00ff00;
-}
-
-.menu-item a {
-    color: #00FFDF;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    font-family: 'Courier New', Courier, monospace; /* Tipografía futurista */
-    text-transform: uppercase;
-}
-
-.menu-item a:hover {
-    background-color: #333;
-    color: #ff00ff; /* Cambio de color al pasar el ratón */
-}
-
-.submenu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none; /* Ocultar submenús por defecto */
-    flex-direction: column;
-    background-color: #333;
-    border: 1px solid #00ff00;
-}
-
-.menu-item:hover .submenu {
-    display: flex; /* Mostrar submenús al pasar el ratón */
-}
-
-.menu-toggle {
-    background-color: #1a1a1a;
-    color: #00ff00;
-    border: 2px solid #00ff00;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    text-align: left;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: uppercase;
-    box-shadow: 0 0 10px #00ff00;
-}
-
-.menu-toggle:hover {
-    background-color: #333;
-    color: #ff00ff;
-}
-
-@media (min-width: 768px) {
-    .menu {
-        display: flex; /* Mostrar el menú en pantallas grandes */
-        flex-direction: row;
-    }
-
-    .menu-item {
-        border: none;
-    }
-
-    .menu-item a {
-        padding: 10px 20px;
-    }
-
-    .submenu {
-        position: absolute;
-        display: none;
-    }
-
-    .menu-item:hover .submenu {
-        display: block;
-    }
-
-    .menu-toggle {
-        display: none; /* Ocultar el botón de menú en pantallas grandes */
-    }
-}
-
-/* Media query para pantallas más grandes */
-@media (min-width: 768px) {
-    .menu-toggle {
-        display: none;
-    }
-
-    .menu {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .menu-item {
-        margin: 0;
-    }
-
-    .menu-item > a {
-        padding: 10px 20px;
-    }
-
-    .submenu {
-        position: absolute;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    /* Ajustar el tamaño de la imagen hero para pantallas grandes */
-    .hero-image img {
-        max-height: 80vh; /* Permite más altura en pantallas grandes */
-    }
-}
-
-.back-button {
-    background-color: #ff00ff; /* Color vibrante típico del New Wave */
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-family: 'Arial', sans-serif; /* Fuente simple y clara */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-    background-color: #cc00cc; /* Color más oscuro al pasar el ratón */
-}
-
 footer {
     background: #0000ff;
     color: #ffcc00;
@@ -214,4 +140,24 @@ footer {
     padding: 10px;
     margin-top: auto;
     font-size: 0.9em;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+    h1.neon-glitch-text {
+        font-size: 1.8em;
+    }
+
+    .category-title {
+        font-size: 1.1em;
+    }
+
+    .bubble-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
 }

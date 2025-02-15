@@ -9,41 +9,20 @@
 </head>
 <body>
     <header>
-        <h1>New Wave como Reacción al Punk</h1>
+        <h1 class="neon-glitch-text">New Wave como Reacción al Punk</h1>
     </header>
     <div class="hero-image">
         <img src="images/1.jpg" alt="Imagen de New Wave con elementos icónicos de la época" loading="lazy">
     </div>
     <main>
         <article class="cyberpunk-border">
-            <p>El New Wave se considera una reacción al punk porque adoptó una dirección musical y cultural que contrastaba con la crudeza y simplicidad del punk, buscando melodías más elaboradas, estructuras de canciones accesibles y experimentación con instrumentos electrónicos como sintetizadores, lo cual diversificó y suavizó el sonido. Estéticamente, el New Wave se distanció del look rebelde y agresivo del punk, adoptando una imagen más colorida, sofisticada y a menudo andrógina, que reflejaba una actitud menos confrontacional y más inclusiva. Esta transformación no solo amplió la audiencia del género, sino que también permitió al New Wave influir significativamente en la cultura pop, especialmente a través de los medios visuales como MTV.</p>
+            <p id="animated-border">El New Wave se considera una reacción al punk porque adoptó una dirección musical y cultural que contrastaba con la crudeza y simplicidad del punk, buscando melodías más elaboradas, estructuras de canciones accesibles y experimentación con instrumentos electrónicos como sintetizadores, lo cual diversificó y suavizó el sonido. Estéticamente, el New Wave se distanció del look rebelde y agresivo del punk, adoptando una imagen más colorida, sofisticada y a menudo andrógina, que reflejaba una actitud menos confrontacional y más inclusiva. Esta transformación no solo amplió la audiencia del género, sino que también permitió al New Wave influir significativamente en la cultura pop, especialmente a través de los medios visuales como MTV.</p>
         </article>
         <button class="back-button" onclick="history.back()">Regresar</button>
     </main>
-    <nav>
-        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-        <ul class="menu">
-            <li class="menu-item"><a href="index.html">Inicio</a></li>
-            <li class="menu-item"><a href="#origen">Origen</a>
-                <ul class="submenu">
-                    <li><a href="reaccion-al-punk.html">Reacción al Punk</a></li>
-                    <li><a href="influencias-precursoras.html">Influencias Precursoras</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="evolucion.html">Evolución</a></li>
-            <li class="menu-item"><a href="caracteristicas.html">Características Musicales</a></li>
-            <li class="menu-item"><a href="estetica.html">Estética y Cultura</a></li>
-            <li class="menu-item"><a href="impacto.html">Impacto y Legado</a></li>
-            <li class="menu-item"><a href="bandas-claves.html">Bandas Claves</a></li>
-        </ul>
-    </nav>
     <footer>
         <p>© 2025 New Wave Exploration. Todos los derechos reservados.</p>
     </footer>
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.menu').classList.toggle('show');
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
