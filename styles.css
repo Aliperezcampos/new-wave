@@ -37,7 +37,7 @@ header {
     background: #ff00ff;
     padding: 20px;
     color: #000000;
-    border-bottom: 3px solid #2802fa;  /* Puedes cambiar 1px por el grosor que quieras y #000 por el color */
+    border-bottom: 3px solid #2802fa;
 }
 
 h1.neon-glitch-text {
@@ -179,4 +179,20 @@ footer {
     footer {
         font-size: 0.8em;
     }
+}
+
+.back-button {
+    background-image: url('images/anterior.png');
+    background-size: 30px 30px; /* Ajusta el tamaño de la imagen */
+    background-repeat: no-repeat;
+    background-position: left center; /* Posiciona la imagen a la izquierda del texto */
+    
+    /* Ajusta el padding para que haya espacio para la imagen */
+    padding-left: 30px; /* Asegúrate de que sea suficiente para mostrar la imagen */
+    
+    /* Estilos adicionales para el botón */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #1E90FF;
 }
