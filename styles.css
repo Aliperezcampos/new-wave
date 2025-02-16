@@ -7,13 +7,37 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+     /* Imagen de fondo */
+     background-image: url('images/3.jpg');
+     /* Centra la imagen de fondo */
+     background-position: center;
+     /* No se repite la imagen */
+     background-repeat: no-repeat;
+     /* Ajusta la imagen al tamaño del contenedor */
+     background-size: cover;
+     /* Fija la imagen de fondo */
+     background-attachment: fixed;
+     
+     /* Efecto de movimiento con parallax */
+     background-attachment: fixed;
+     animation: move-background 20s ease infinite;
+}
+
+@keyframes move-background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
 }
 
 header {
     text-align: center;
     background: #ff00ff;
     padding: 20px;
-    color: #000;
+    color: #000000;
+    border-bottom: 3px solid #2802fa;  /* Puedes cambiar 1px por el grosor que quieras y #000 por el color */
 }
 
 h1.neon-glitch-text {
@@ -56,14 +80,6 @@ h1.neon-glitch-text {
     text-shadow: 0 0 10px #ff4500;
 }
 
-.bubble-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-    padding: 0 10px; /* Padding para mejorar la experiencia en móvil */
-}
-
 .button-group {
     display: flex;
     flex-wrap: wrap;
@@ -73,7 +89,10 @@ h1.neon-glitch-text {
 }
 
 .bubble-button {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
     padding: 15px 30px;
     color: #ffffff; /* Color del texto */
     text-decoration: none;
